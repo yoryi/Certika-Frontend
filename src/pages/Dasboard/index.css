@@ -25,6 +25,10 @@
   background-color: #2E303F;
   height: calc(450px + 0.5vw);
   border-radius: 20px;
+  padding-left: calc(10px + 0.5vw);
+  padding-top: calc(5px + 0.5vw);
+  padding-right: calc(10px + 0.5vw);
+  overflow-y: scroll;
 }
 
 

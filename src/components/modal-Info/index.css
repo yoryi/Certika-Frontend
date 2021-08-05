@@ -19,31 +19,20 @@
 
 }
 
-.ButtonModal{
+.ButtonEliminar{
   height: calc(40px + 0.5vw);
   width: 100%;
   border-radius: 10px;
-  background-color: #1B62FF;
-  border-color: #1B62FF;
+  background-color: red;
 }
 
-.ContenedorModal{
-  height: 5vh;
-  width: 35rem;
-  background-color: white;
+.textinfo{
+  font-size: calc(10px + 0.5vw);
 }
 
-.ContenedorInput{
-  height: 40vh;
-  width: 35rem;
-  background-color: white;
-  padding-right: 0%;
-  padding-top: 1%;
+.textinfo2{
+  padding-left: 3%;
+  font-size: calc(10px + 0.5vw);
+  color: #909090;
 }
 
-.ContenedorBtn{
-  height: 10vh;
-  width: 35rem;
-  background-color: white;
-  padding-top: 5% 
-}

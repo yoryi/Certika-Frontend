@@ -1,16 +1,25 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import routes from './config/router';
 
+//REDUX
+import { store, persistor } from './redux/stores/store';
+
 function App() {
   return (
-    <Router>
-      <Switch>
-        {routes.map((route, index) => (
-          <RouteWithSubRoutes key={index} {...route} />
-        ))}
-      </Switch>
-    </Router>
+    <Provider store={store}>
+      <PersistGate persistor={persistor} loading={null}>
+        <Router>
+          <Switch>
+            {routes.map((route, index) => (
+              <RouteWithSubRoutes key={index} {...route} />
+            ))}
+          </Switch>
+        </Router>
+      </PersistGate>
+    </Provider>
   );
 }
 
