@@ -14,10 +14,10 @@ import { GetMonitores } from '../../redux/actions/Monitores';
 import { DeleteMonitor, SaveMonitores } from '../../services/api';
 
 function Monitores(props) {
-
   //Modal
   const [ModalInput, setModal] = useState(false)
   const [ModalInfo, setModalInfo] = useState(false)
+  const [ModModal, setModModal] = useState(false)
 
   //Data Modal
   const [Nombre, setNombre] = useState("")
@@ -34,7 +34,7 @@ function Monitores(props) {
     Clear()
   }
 
-  const Clear =()=>{
+  const Clear = () => {
     setTimeout(() => {
       props.setValue('nombre', '')
       props.setValue('apellido', '')
@@ -80,8 +80,16 @@ function Monitores(props) {
     GetMonitores()
   }
 
+  const Edit = () => {
+    setTimeout(() => {
+      props.setValue('newnombre', nombre)
+      props.setValue('newapellido', apellido)
+    }, 100)
+    setModModal(true)
+  }
+
   const Save = () => {
-    SaveMonitores(nombre,apellido,programa,semestre,cedula,informacion)
+    SaveMonitores(nombre, apellido, programa, semestre, cedula, informacion)
     setModal(false)
     Clear()
     GetMonitores()
@@ -131,6 +139,8 @@ function Monitores(props) {
         cedula={Cedula}
         informacion={Informacion}
         BtnEliminar={() => Delete()}
+        BtnModificar={() => Edit()}
+        modificar={ModModal}
       />
 
       <Col className={'Col1'}>
@@ -164,7 +174,6 @@ const mapStateToProps = state => {
     semestre: state.Input.semestre,
     cedula: state.Input.cedula,
     informacion: state.Input.informacion
-
   }
 }
 

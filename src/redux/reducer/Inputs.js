@@ -4,7 +4,15 @@ const initialState = {
     programa: '',
     semestre: '',
     cedula: '',
-    informacion: ''
+    informacion: '',
+
+    //Modificar Campos
+    newnombre:'',
+    newapellido:'',
+    newprograma: '',
+    newsemestre: '',
+    newcedula: '',
+    newinformacion: '',
   };
   
   const Inputs = (state = initialState, action) => {
