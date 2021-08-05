@@ -1,0 +1,28 @@
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:rgba(0, 0, 0, 0.5)
+}
+
+.Modal{
+  top: 35%;
+  height: 65%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -30%;
+  transform: translate(-50%, -40%);
+  border-radius: 17px;
+
+}
+
+.ButtonModal{
+  height: calc(40px + 0.5vw);
+  width: 100%;
+  border-radius: 10px;
+  background-color: #1B62FF;
+  border-color: #1B62FF;
+}

@@ -1,0 +1,35 @@
+.Contenedor{
+  background-color: #1D1D2A;
+}
+
+.Col1{
+  padding-top: 3%;
+  padding-left: 2%;
+}
+
+.Col2{
+  padding-top: 1%;
+  padding-left: 2%;
+}
+
+.Button{
+  height: calc(40px + 0.5vw);
+  width: calc(200px + 0.5vw);
+  border-radius: 10px;
+}
+
+.TextButton{
+  font-size: calc(15px + 1vmin);
+  margin-top: calc(-6px + 1vmin);
+}
+
+.TextPrincipal{
+  font-size: calc(12px + 2vmin);
+  color: white;
+}
+
+.TextSegundario{
+  font-size: calc(5px + 1vmin);
+  margin-top: -10px;
+  color: white;
+}
