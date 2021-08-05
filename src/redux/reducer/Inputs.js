@@ -1,5 +1,5 @@
 const initialState = {
-    nombre: 'juananaa',
+    nombre: '',
     apellido: '',
     programa: '',
     semestre: '',

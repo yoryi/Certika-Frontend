@@ -30,6 +30,11 @@ function Monitores(props) {
   const { data, nombre, apellido, programa, semestre, cedula, informacion } = props
 
   const closeModal = () => {
+    setModal(false);
+    Clear()
+  }
+
+  const Clear =()=>{
     setTimeout(() => {
       props.setValue('nombre', '')
       props.setValue('apellido', '')
@@ -38,7 +43,6 @@ function Monitores(props) {
       props.setValue('cedula', '')
       props.setValue('informacion', '')
     }, 100)
-    setModal(false);
   }
 
   const closeModalInfo = () => {
@@ -78,7 +82,8 @@ function Monitores(props) {
 
   const Save = () => {
     SaveMonitores(nombre,apellido,programa,semestre,cedula,informacion)
-    setModalInfo(false)
+    setModal(false)
+    Clear()
     GetMonitores()
   }
 
